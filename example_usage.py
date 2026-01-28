@@ -4,7 +4,7 @@ Example usage for BSL-PSQL - PostgreSQL wire protocol adapter for Boring Semanti
 
 import logging
 import ibis
-from bsl_psql.server import BSLPostgresServer
+from bsl_postgres.server import BSLPostgresServer
 from boring_semantic_layer import to_semantic_table
 
 def create_sample_semantic_tables():

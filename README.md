@@ -1,6 +1,6 @@
-# BSL-PSQL: PostgreSQL Wire Protocol Adapter for Boring Semantic Layer
+# BSL-postgres: PostgreSQL Wire Protocol Adapter for Boring Semantic Layer
 
-**BSL-PSQL** is a PostgreSQL wire protocol adapter that exposes Boring Semantic Layer (BSL) semantic tables as PostgreSQL tables. It translates SQL queries to BSL semantic queries and returns results in PostgreSQL-compatible format.
+**BSL-postgres** is a PostgreSQL wire protocol adapter that exposes Boring Semantic Layer (BSL) semantic tables as PostgreSQL tables. It translates SQL queries to BSL semantic queries and returns results in PostgreSQL-compatible format.
 
 ## Features
 
@@ -15,7 +15,7 @@
 ```
 PostgreSQL Client (psql, BI tools, etc.)
         ↓ PostgreSQL Wire Protocol
-BSL-PSQL Server (this project)
+BSL-postgres Server (this project)
         ↓ SQL → BSL Translation
 Boring Semantic Layer
         ↓ Semantic Queries
@@ -26,8 +26,8 @@ Underlying Data (DuckDB, Pandas, Arrow, etc.)
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-repo/bsl-psql.git
-cd bsl-psql
+git clone https://github.com/DirendAI/BSL-postgres.git
+cd BSL-postgres
 
 # Install dependencies
 uv sync
@@ -65,7 +65,7 @@ flights_table = (
 ### 2. Start the Server
 
 ```python
-from bsl_psql.server import BSLPostgresServer
+from bsl_postgres.server import BSLPostgresServer
 
 # Create and configure server
 server = BSLPostgresServer("localhost", 5432)
@@ -88,7 +88,7 @@ SELECT destination, flight_count FROM flights;
 
 ## SQL Support
 
-BSL-PSQL supports a restricted SQL dialect that maps directly to BSL semantics:
+BSL-postgres supports a restricted SQL dialect that maps directly to BSL semantics:
 
 ```sql
 -- Basic query with automatic GROUP BY inference
@@ -113,7 +113,7 @@ SELECT dim1, dim2, measure1, measure2 FROM my_table
 ### Semantic Catalog
 
 ```python
-from bsl_psql.server import BSLSemanticCatalog
+from bsl_postgres.server import BSLSemanticCatalog
 
 catalog = BSLSemanticCatalog()
 catalog.register_table("flights", flights_table)
@@ -156,7 +156,7 @@ psql -h localhost -p 5432 -U postgres
 ### Project Structure
 
 ```
-├── bsl_psql/                  # Main package
+├── bsl_postgres/             # Main package
 │   └── server.py             # PostgreSQL server implementation
 ├── example_usage.py          # Example usage
 ├── pyproject.toml            # Project configuration
