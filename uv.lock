@@ -51,7 +51,7 @@ wheels = [
 ]
 
 [[package]]
-name = "bsl-psql"
+name = "bsl-ppostgres"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
@@ -69,7 +69,7 @@ requires-dist = [
     { name = "ibis-framework", extras = ["duckdb"], specifier = ">=11.0.0" },
     { name = "pandas", specifier = ">=2.0.0" },
     { name = "pyarrow", specifier = ">=14.0.0" },
-    { name = "riffq", specifier = ">=0.1.0" },
+    { name = "riffq", specifier = ">=0.1.7" },
     { name = "sqlglot", specifier = ">=24.0.0" },
 ]
 

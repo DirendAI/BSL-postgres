@@ -5,7 +5,7 @@ description = "PostgreSQL wire protocol adapter for Boring Semantic Layer"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "riffq>=0.1.0",
+    "riffq>=0.1.7",
     "boring-semantic-layer>=0.1.0",
     "sqlglot>=24.0.0",
     "pandas>=2.0.0",
