@@ -1,0 +1,14 @@
+[project]
+name = "bsl-psql"
+version = "0.1.0"
+description = "PostgreSQL wire protocol adapter for Boring Semantic Layer"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "riffq>=0.1.0",
+    "boring-semantic-layer>=0.1.0",
+    "sqlglot>=24.0.0",
+    "pandas>=2.0.0",
+    "pyarrow>=14.0.0",
+    "ibis-framework[duckdb]>=11.0.0",
+]
