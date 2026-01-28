@@ -1,5 +1,5 @@
 [project]
-name = "bsl-psql"
+name = "bsl-ppostgres"
 version = "0.1.0"
 description = "PostgreSQL wire protocol adapter for Boring Semantic Layer"
 readme = "README.md"
